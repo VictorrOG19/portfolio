@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
-import { Plus } from "lucide-react";
+import { Plus, House, CircleUserRound, CodeXml } from "lucide-react";
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);

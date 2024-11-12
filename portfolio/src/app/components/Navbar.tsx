@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import { Plus } from "lucide-react";
@@ -11,13 +12,13 @@ export default function Navbar() {
             <div className={styles.navbar}>
                 <div className={styles.logo}>
                     <div className={styles.circle}></div>
-                    <a href="/">Victor Natan</a>
+                    <Link href="/">Victor Natan</Link>
                 </div>
 
                 <div className={styles.links}>
-                    <a href="/">Início</a>
-                    <a href="/">Sobre mim</a>
-                    <a href="/">Contato</a>
+                    <Link href="/">Início</Link>
+                    <Link href="/">Sobre mim</Link>
+                    <Link href="/">Contato</Link>
                 </div>
 
                 <div className={styles["mobile-button"]}>
@@ -32,9 +33,9 @@ export default function Navbar() {
             {isOpen && (
                 <div className={styles["mobile-menu"]}>
                     <div className={styles["links-mobile"]}>
-                        <a href="/">Início</a>
-                        <a href="/">Sobre mim</a>
-                        <a href="/">Contato</a>
+                        <Link href="/">Início</Link>
+                        <Link href="/">Sobre mim</Link>
+                        <Link href="/">Contato</Link>
                     </div>
                 </div>
             )}

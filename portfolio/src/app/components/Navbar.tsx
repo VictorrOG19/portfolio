@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
-import { Plus, House, CircleUserRound, CodeXml } from "lucide-react";
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
@@ -17,8 +16,8 @@ export default function Navbar() {
 
                 <div className={styles.links}>
                     <Link href="/">Início</Link>
-                    <Link href="/">Sobre mim</Link>
-                    <Link href="/">Contato</Link>
+                    <Link href="/about">Sobre mim</Link>
+                    <Link href="/contant">Contato</Link>
                 </div>
 
                 <div className={styles["mobile-button"]}>
@@ -26,7 +25,7 @@ export default function Navbar() {
                         className={`${styles.icon} ${isOpen ? styles.rotate : ''}`}
                         onClick={() => setOpen(!isOpen)}
                     >
-                        <Plus />
+                        <i className="fa-solid fa-plus"></i>
                     </button>
                 </div>
             </div>
